@@ -7,10 +7,7 @@
 System.Console.Write("Введите число N: ");
 int N = Convert.ToInt32(System.Console.ReadLine());
 
-for (int i = 1; i <= N; i++)
+for (int i = 2; i <= N; i += 2)
 {
-    if (i % 2 == 0)
-    {
-        System.Console.Write(i + " ");
-    }
+    System.Console.Write(i + " ");
 }
