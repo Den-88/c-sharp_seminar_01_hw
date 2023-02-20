@@ -74,7 +74,7 @@ void SortMatrixElements(int[,] matrix)
             int tempElement = matrix[i, j];
             for (int k = j; k < matrix.GetLength(1); k++)
             {
-                if (matrix[i, k] < tempElement)
+                if (matrix[i, k] > tempElement)
                 {
                     matrix[i, j] = matrix[i, k];
                     matrix[i, k] = tempElement;
