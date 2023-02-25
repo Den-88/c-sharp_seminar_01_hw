@@ -5,16 +5,20 @@
 // M = 4; N = 8. -> 30
 
 Metka:
-System.Console.Write("Введите число M: ");
-int m = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Введите число N: ");
-int n = Convert.ToInt32(Console.ReadLine());
+int m = ReadInt("M");
+int n = ReadInt("N");
 if (n <= m)
 {
     System.Console.WriteLine("Нет чисел в промежутке от M до N! Повторите ввод!");
     goto Metka;
 }
 System.Console.WriteLine("Сумма натуральных элементов в промежутке от M до N: " + GetSum(m, n, 0));
+
+int ReadInt(string text)
+{
+    System.Console.Write("Введите число " + text + ": ");
+    return Convert.ToInt32(Console.ReadLine());
+}
 
 int GetSum(int numM, int numN, int sum)
 {
