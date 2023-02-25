@@ -22,6 +22,5 @@ int GetSum(int numM, int numN, int sum)
     {
         return sum;
     }
-    sum += numM;
-    return GetSum(numM + 1, numN, sum);
+    return GetSum(numM + 1, numN, sum += numM);
 }
